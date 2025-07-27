@@ -11,7 +11,7 @@ public class AuthPassengerDetails extends Passenger implements UserDetails {
     private String username;
     private String password;
 
-    public AuthPassengerDetails(Passenger passenger){
+    public AuthPassengerDetails(Passenger passenger) {
         this.username = passenger.getEmail();
         this.password = passenger.getPassword();
     }
@@ -24,6 +24,11 @@ public class AuthPassengerDetails extends Passenger implements UserDetails {
     @Override
     public String getUsername() {
         return this.username;
+    }
+
+    @Override
+    public String getPassword() {
+        return this.password;
     }
 
     //Below set of methods do not matter
